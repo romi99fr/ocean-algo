@@ -3,7 +3,6 @@ import json
 import zipfile
 from unittest import mock
 
-@mock.patch.dict(os.environ, {"DIDS": " [ \"8f67E08be5dD941a701c2491E814535522c33bC2\" ]"})
 @mock.patch.dict(os.environ, {"ROOT_FOLDER": os.path.dirname(os.path.realpath(__file__))})
 def get_job_details():
     root = os.getenv('ROOT_FOLDER', '')
