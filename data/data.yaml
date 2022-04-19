@@ -1,0 +1,6 @@
+names:
+- object
+nc: 1
+train: Fuji-SfM-dataset-1/train/images
+val: Fuji-SfM-dataset-1/valid/images
+test: Fuji-SfM-dataset-1/test/images
