@@ -1,14 +1,14 @@
 #!/bin/bash
 
-jq -r '.[]'<(echo $DIDS) | while read i; do
+jq -r '.[]' <(echo $DIDS) | while read i; do
 
-unzip -j /data/inputs/$i/0 -d /data/input/ #UNZIP INPUT DATA to /data/input/
+ unzip -j data/inputs/$i/0 -d data/input/ #UNZIP INPUT DATA to /data/input/
 
 done
 
 wait
 
-python detect.py --source /data/input/ # run yolov5 python to detect images at /data/input
+python detect.py --weights /model/best.pt --source /data/input/ # run yolov5 python to detect images at /data/input
 
 wait
 
