@@ -2,7 +2,7 @@
 
 jq -r '.[]' <(echo $DIDS) | while read i; do
 
- unzip -j data/inputs/$i/0 -d data/input/ #UNZIP INPUT DATA to /data/input/
+ unzip -j /data/inputs/$i/0 -d data/input/ #UNZIP INPUT DATA to /data/input/
 
 done
 
